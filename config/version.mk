@@ -18,6 +18,8 @@ else
 endif
 endif
 
+	echo "Maintainer         : Tapin Recovery Instraller" 
+
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=PB-$(ROM_VERSION) \
