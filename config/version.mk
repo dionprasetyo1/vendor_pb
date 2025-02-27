@@ -13,12 +13,13 @@ ifdef BUILDTYPE_RELEASE
 else
 ifeq ($(ROM_BUILDTIME_UTC),y)
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
+    echo "Maintainer         : Tapin Recovery Instraller" 
 else
     ROM_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(TARGET_PRODUCT_SHORT)-$(ROM_BUILDTYPE)
+    echo "Maintainer         : Tapin Recovery Instraller" 
 endif
 endif
 
-	echo "Maintainer         : Tapin Recovery Instraller" 
 
 # Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
